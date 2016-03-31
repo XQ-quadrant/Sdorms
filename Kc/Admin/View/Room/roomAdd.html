@@ -1,0 +1,346 @@
+<extend name="Layout/layout2" />
+
+<block name="css_js">
+	<link rel="stylesheet" href="__PUBLIC__/assets/css/style.css">
+	<link rel="stylesheet" href="__PUBLIC__/assets/css/loader-style.css">
+	<link rel="stylesheet" href="__PUBLIC__/assets/css/bootstrap.css">
+
+	<link href="__PUBLIC__/assets/js/iCheck/flat/all.css" rel="stylesheet">
+	<link href="__PUBLIC__/assets/js/iCheck/line/all.css" rel="stylesheet">
+
+	<link href="__PUBLIC__/assets/js/colorPicker/bootstrap-colorpicker.css" rel="stylesheet">
+	<link href="__PUBLIC__/assets/js/switch/bootstrap-switch.css" rel="stylesheet">
+	<link href="__PUBLIC__/assets/js/validate/validate.css" rel="stylesheet">
+	<link href="__PUBLIC__/assets/js/idealform/css/jquery.idealforms.css" rel="stylesheet">">-->
+	<link rel="stylesheet" href="__PUBLIC__/assets/css/mail.css">
+</block>
+<block name="content">
+	<div class="wrap-fluid">
+		<div class="container-fluid paper-wrap bevel tlbr">
+
+
+
+
+
+			<!-- CONTENT -->
+			<!--TITLE -->
+			<div class="row">
+				<div id="paper-top">
+					<div class="col-sm-3">
+						<h2 class="tittle-content-header">
+							<i class="icon-document-edit"></i>
+                            <span>Form Element
+                            </span>
+						</h2>
+
+					</div>
+
+					<div class="col-sm-7">
+						<div class="devider-vertical visible-lg"></div>
+						<div class="tittle-middle-header">
+
+							<div class="alert">
+								<button type="button" class="close" data-dismiss="alert">×</button>
+								<span class="tittle-alert entypo-info-circled"></span>
+								Welcome back,&nbsp;
+								<strong>Dave mattew!</strong>&nbsp;&nbsp;Your last sig in at Yesterday, 16:54 PM
+							</div>
+
+
+						</div>
+
+					</div>
+					<div class="col-sm-2">
+						<div class="devider-vertical visible-lg"></div>
+						<div class="btn-group btn-wigdet pull-right visible-lg">
+							<div class="btn">
+								Widget</div>
+							<button data-toggle="dropdown" class="btn dropdown-toggle" type="button">
+								<span class="caret"></span>
+								<span class="sr-only">Toggle Dropdown</span>
+							</button>
+							<ul role="menu" class="dropdown-menu">
+								<li>
+									<a href="#">
+										<span class="entypo-plus-circled margin-iconic"></span>Add New</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="entypo-heart margin-iconic"></span>Favorite</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="entypo-cog margin-iconic"></span>Setting</a>
+								</li>
+							</ul>
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+			<!--/ TITLE -->
+
+			<!-- BREADCRUMB -->
+			<ul id="breadcrumb">
+				<li>
+					<span class="entypo-home"></span>
+				</li>
+				<li><i class="fa fa-lg fa-angle-right"></i>
+				</li>
+				<li><a href="#" title="Sample page 1">Form</a>
+				</li>
+				<li><i class="fa fa-lg fa-angle-right"></i>
+				</li>
+				<li><a href="#" title="Sample page 1">Form Element</a>
+				</li>
+				<li class="pull-right">
+					<div class="input-group input-widget">
+
+						<input style="border-radius:15px" type="text" placeholder="Search..." class="form-control">
+					</div>
+				</li>
+			</ul>
+
+			<!-- END OF BREADCRUMB -->
+
+
+			<!--<div class="content-wrap">
+				<div class="row">
+
+
+					<div class="col-sm-12">
+						<div class="nest" id="basicClose">
+							<div class="title-alt">
+								<h6>Basic</h6>
+								<div class="titleClose">
+									<a class="gone" href="#basicClose">
+										<span class="entypo-cancel"></span>
+									</a>
+								</div>
+								<div class="titleToggle">
+									<a class="nav-toggle-alt" href="#basic">
+										<span class="entypo-up-open"></span>
+									</a>
+								</div>
+
+							</div>
+
+							<div class="body-nest" id="basic">
+								<div class="form_center">
+									<form role="form">
+										<div class="form-group">
+											<label for="exampleInputEmail1">Email address</label>
+											<input type="email" placeholder="Enter email" id="exampleInputEmail1" class="form-control">
+										</div>
+										<div class="form-group">
+											<label for="exampleInputPassword1">Password</label>
+											<input type="password" placeholder="Password" id="exampleInputPassword1" class="form-control">
+										</div>
+										<div class="form-group">
+											<label for="exampleInputFile">File input</label>
+											<input type="file" id="exampleInputFile">
+											<p class="help-block">Example block-level help text here.</p>
+										</div>
+										<div class="checkbox">
+											<label>
+												<input type="checkbox">Check me out
+											</label>
+										</div>
+										<button class="btn btn-info" type="submit">Submit</button>
+									</form>
+								</div>
+
+
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>-->
+
+
+
+
+			<div class="content-wrap">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="nest" id="horizontalClose">
+							<div class="title-alt">
+								<h6>
+									Horizontal Forms</h6>
+								<div class="titleClose">
+									<a class="gone" href="#horizontalClose">
+										<span class="entypo-cancel"></span>
+									</a>
+								</div>
+								<div class="titleToggle">
+									<a class="nav-toggle-alt" href="#horizontal">
+										<span class="entypo-up-open"></span>
+									</a>
+								</div>
+
+							</div>
+
+							<div class="body-nest" id="horizontal">
+								<div class="form_center">
+									<form role="form" id="form-submit" class="form-horizontal">
+										<div class="form-group">
+											<label class="col-lg-2 col-sm-2 control-label" for="title">商品标题</label>
+											<div class="col-sm-6">
+												<input type="text" id="title" name="title" class="form-control">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-lg-2 col-sm-2 control-label" for="address">地址描述</label>
+											<div class="col-sm-6">
+												<input type="text" id="address" name="address" class="form-control">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-lg-2 col-sm-2 control-label" for="price">价格</label>
+											<div class="col-sm-6">
+												<input type="text" id="price" name="price" class="form-control">
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-lg-2 col-sm-2 control-label" for="connect">联系方式</label>
+											<div class="col-lg-10">
+												<input type="email" placeholder="电话" id="connect" name="connect" class="form-control">
+												<p class="help-block">Example block-level help text here.</p>
+											</div>
+										</div>
+										<div class="form-group">
+
+											<label class="col-lg-2 col-sm-2 control-label" for="myEditor">商品详情</label>
+											<div class="col-lg-8">
+												<textarea id="myEditor" name="content" type="text/plain" >
+												</textarea>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-lg-2 col-sm-2 control-label" for="exampleInputFile">图</label>
+											<div class="col-lg-10">
+												<input type="file" id="exampleInputFile">
+												<p class="help-block">贴图</p>
+											</div>
+
+										</div>
+										<div class="form-group">
+											<div class="col-lg-offset-2 col-lg-10">
+												<div class="checkbox">
+													<label>
+														<input type="checkbox">我遵守《XXXXXX》
+													</label>
+												</div>
+											</div>
+										</div>
+									</form>
+									<div class="form-group">
+										<div class="col-lg-offset-2 col-lg-10">
+											<button class="btn btn-danger" id="submit" type="submit"> 发 布 </button>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<script>
+				$('#submit').click(function () {
+					var t = $(this);
+					var myForm = $('#form-submit');
+					var data = new FormData(myForm[0]);
+
+					$(this).attr("disabled",true);
+					$('#submit').text('发布中……')
+					alert(myForm.serialize());
+					$.ajax({
+						url: '__URL__/addAtc/cate/{$cate}/mid/{$mid}',
+						type: 'post',//提交的方式
+						dataType: 'json',
+						data: myForm.serialize(),
+						/*cache: false,
+						processData: false,
+						contentType: false,*/
+						success: function (rdata) {
+							alert(rdata.msg);
+							t.removeAttr("disabled");
+							if (rdata.status == 1) {
+								window.location.href = '__URL__/index/cate/29'; //document.referrer;
+							}
+							if(rdata.status != 1){
+								$('#submit').text('发布')
+							}
+						},
+						error:function(){
+							$(this).removeAttr("disabled");
+						}
+					});
+				});
+			</script>
+
+			<!-- /END OF CONTENT -->
+
+
+
+			<!-- FOOTER -->
+			<div class="footer-space"></div>
+			<div id="footer">
+				<div class="devider-footer-left"></div>
+				<div class="time">
+					<p id="spanDate">
+					<p id="clock">
+				</div>
+				<div class="copyright">Make with Love
+					<span class="entypo-heart"></span>Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a> All Rights Reserved</div>
+				<div class="devider-footer"></div>
+
+			</div>
+			<!-- / END OF FOOTER -->
+
+
+		</div>
+	</div>
+</block>
+<block name="js_foot">
+	<!-- 配置文件 -->
+	<script type="text/javascript" src="__PUBLIC__/editor/ueditor.config.js"></script>
+	<!-- 编辑器源码文件 -->
+	<script type="text/javascript" src="__PUBLIC__/editor/ueditor.all.js"></script>
+
+	<script type="text/javascript" src="__PUBLIC__/assets/js/iCheck/jquery.icheck.js"></script>
+	<script type="text/javascript" src="__PUBLIC__/assets/js/switch/bootstrap-switch.js"></script>
+
+	<!--  PLUGIN -->
+	<script>
+		var ue = UE.getEditor('myEditor');  //Ueditor初始化
+
+		$(document).ready(function() {
+			//CHECKBOX PRETTYFY
+			$('.skin-flat input').iCheck({
+				checkboxClass: 'icheckbox_flat-red',
+				radioClass: 'iradio_flat-red'
+			});
+			$('.skin-line input').each(function() {
+				var self = $(this),
+						label = self.next(),
+						label_text = label.text();
+
+				label.remove();
+				self.iCheck({
+					checkboxClass: 'icheckbox_line-blue',
+					radioClass: 'iradio_line-blue',
+					insert: '<div class="icheck_line-icon"></div>' + label_text
+				});
+			});
+			//Switch Button
+
+			$('.make-switch').bootstrapSwitch('setSizeClass', 'switch-small');
+		});
+	</script>
+</block>

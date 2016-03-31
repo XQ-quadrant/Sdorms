@@ -1,0 +1,147 @@
+<extend name="Layout/layout" />
+<block name="cate">
+    <ul class="nav" id="side-menu"  >
+    <li>
+        <a href="/kechuang4/index.php/Home/Article/index/cate/10">组队&amp;招募<span class="fa arrow"></span></a>
+        <ul class="nav nav-second-level"  >
+            <li>
+                <a href="/kechuang4/index.php/Home/Article/index/cate/26/openid/{$openid}">科创招募</a>
+            </li>
+            <li>
+                <a href="/kechuang4/index.php/Home/Article/addAtc/cate/10/mid/5/openid/{$openid}">发起组队</a>
+            </li>
+            <li>
+                <a href="/kechuang4/index.php/Home/Article/index/cate/10/openid/{$openid}">组队信息</a>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a href="/kechuang4/index.php/Home/Article/index/cate/22/openid/{$openid}">科创消息</a>
+    </li>
+    </ul>
+</block>
+
+<block name="content">
+
+    <div class="xs">
+        <!--<h3>新闻</h3>-->
+        <!--<form action="#" method="GET">
+            <div class="input-group">
+                <input type="text" name="search" class="form-control input-search" placeholder="Search...">
+                    <span class="input-group-btn">
+                        <button class="btn btn-success" type="button"><i class="fa fa-search"></i></button>
+                    </span>
+            </div>&lt;!&ndash; Input Group &ndash;&gt;
+        </form>-->
+        <ol class="breadcrumb" style="margin-bottom: 10px">
+            <li><a href="#">科创俱乐部</a></li>
+            <li><a href="#">竞赛</a></li>
+            <li class="active">团队组建</li>
+        </ol>
+        <div class="btn-group btn-group-justified" role="group" aria-label="..." style="margin-bottom: 8px">
+            <a role="button" class="btn btn-primary" href="__URL__/index/cate/10/openid/{$openid}">组队信息</a>
+            <a role="button" class="btn btn-default" href="__MODULE__/Article/index/cate/26/openid/{$openid}">SRTP课题</a>
+            <a role="button" class="btn btn-default" href="__URL__/addAtc/cate/10/mid/5/openid/{$openid}">发起组队</a>
+        </div>
+        <!--<div class="modal-content-small" >
+        <form class="navbar-middle">
+            <input type="text" class="form-control-blue"  placeholder="信息搜索" style="border:1px solid #00bcd4 ;">
+        </form>
+        </div>-->
+<style>
+    .media-list {
+        padding-left: 0;
+        list-style: none;
+    }
+    ul, ol {
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+    .media:first-child {
+        margin-top: 0;
+    }
+    .media, .media .media {
+        margin-top: 15px;
+    }
+    .media, .media-body {
+        overflow: hidden;
+        zoom: 1;
+    }
+    .chat-pop {
+        background-color: rgba(238, 252, 255, 0.76);
+        padding: 6px 8px;
+        border-radius: 4px;
+        position: relative;
+        height: 100px;
+        min-height: 105px;
+        color: #7191a3;
+        /*max-height: 100px;*/
+        /*width: 90%;*/
+    }
+    .chat-pop span{
+        /*font-size: medium;*/
+        color: #81a5ba;
+    }
+
+
+
+    .pagination p{
+        text-align: center;
+    }
+
+
+
+</style>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <!-- BOX -->
+                <div class="box border green chat-window">
+
+                    <div class="box-body big" style="padding:10px 0px">
+                        <!--<div class="scroller" data-height="450px" data-always-visible="1" data-rail-visible="1">-->
+                        <ul class="media-list chat-list">
+                            <volist name="list" id="vo">
+                            <li class="media ">
+
+                                <div class="portrait-list" >
+                                    <a class="" href="__MODULE__/User/profile/id/{$vo.uid}" style="display: block">
+                                        <img class="media-object" alt="hah" src="__PUBLIC__/default/default_{$vo.sex}.png" style="width: 100%">
+                                    </a>
+                                    <p style="text-align: center;">{$vo.uname}</p>
+
+                                    <!--<p style="text-align: center;">1/4</p>-->
+                                </div>
+
+                                <div class="media-body chat-pop" >
+                                    <a href="__URL__/detail/mid/{$vo.model_id}/id/{$vo.id}">
+                                    <p class="media-heading">{$vo.title}</p>
+                                    <h6>{$vo.race}</h6>
+                                    <span>{$vo.orienting}</span>
+                                    <p>{$vo.content}</p>
+                                    </a>
+                                    <span class="pull-right">{$vo.createtime}</span>
+                                </div>
+
+                            </li>
+                            </volist>
+
+
+                            <p style="text-align: center;color: darkgrey"><br>以下招募过期</p>
+
+
+                        </ul>
+                        <!--</div>-->
+                        <div class="divide-20"></div>
+
+                    </div>
+                </div>
+                <!-- /BOX -->
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</block>

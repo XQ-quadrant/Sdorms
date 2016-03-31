@@ -1,0 +1,107 @@
+<extend name="Layout/layout" />
+
+<block name="content">
+<div class="xs">
+	<h3>注册</h3>
+	<div class="panel-body">
+		<form role="form" class="form-horizontal" id="form-register" >
+			<div class="form-group"  id="email">
+				<label class="col-md-2 control-label">邮箱</label>
+				<div class="col-md-8">
+					<div class="input-group">
+									<span class="input-group-addon">
+										<i class="fa fa-envelope-o"></i>
+									</span>
+						<input name="email"  type="text" class="form-control1" placeholder="email">
+					</div>
+				</div>
+			</div>
+			<div class="form-group" id="password">
+				<label class="col-md-2 control-label">密码</label>
+				<div class="col-md-8">
+					<div class="input-group">
+									<span class="input-group-addon">
+										<i class="fa fa-key"></i>
+									</span>
+						<input name="password" type="password" class="form-control1" id="InputPassword1" placeholder="密码">
+					</div>
+				</div>
+			</div>
+			<div class="form-group" id="repassword" >
+				<label class="col-md-2 control-label">确认密码</label>
+				<div class="col-md-8">
+					<div class="input-group">
+						<span class="input-group-addon">
+							<i class="fa fa-key"></i>
+						</span>
+						<input name="repassword"  type="password" class="form-control1" id="InputPassword2" placeholder="确认密码">
+					</div>
+				</div>
+				<div class="col-sm-2" >
+					<p class="help-block" style="display:none;">两次密码不一致</p>
+				</div>
+			</div>
+			<div class="form-group"  id="name">
+				<label class="col-md-2 control-label">姓名</label>
+				<div class="col-md-8">
+					<div class="input-group">
+									<span class="input-group-addon">
+										<i class="fa fa-envelope-o"></i>
+									</span>
+						<input name="name"  type="text" class="form-control1" placeholder="姓名">
+					</div>
+				</div>
+			</div>
+
+		</form>
+		<div class="panel-footer">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2">
+					<button id="submit" class="btn-success btn">提交</button>
+					<button class="btn-default btn">预览</button>
+					<!--<button class="btn-inverse btn">Reset</button>-->
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+	<script>
+		$('#submit').click(function() {
+			var myForm = $('#form-register');
+			$.ajax({
+				url: '__URL__/register/mid/{$mid}',
+				type: 'post',//提交的方式i
+				dataType:'json',
+				data: myForm.serialize(),
+				success: function(data) {
+					alert(data.msg);
+					if(data.status==1){
+						history.go(-1);
+					}
+
+					//这是成功返回的数据，写自己的逻辑
+				}
+			});
+		});
+
+		$('#repassword input').blur(function(){
+			//alert(3);
+			var pwd =$('#password');
+			var repwd =$('#repassword');
+			if(pwd.find('input').val() != repwd.find('input').val() ){
+				//alert(1);
+				repwd.addClass('has-error');
+				repwd.find('.help-block').show();
+			}else{
+				repwd.removeClass('has-error');
+				repwd.find('.help-block').hide();
+			}
+
+			//alert(2);
+		});
+		$(function(){
+
+		})
+	</script>
+</block>
